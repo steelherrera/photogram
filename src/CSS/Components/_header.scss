@@ -1,0 +1,15 @@
+.header{
+    background: #FFF;
+    height: 47px;
+    position: fixed;
+    width:100%;
+    z-index: 10;
+    .logo-link{
+        text-decoration: none;
+        color: inherit;
+        .logo{
+            font-size: 25px;
+            font-family: 'Leckerli One';
+        }   
+    }
+}

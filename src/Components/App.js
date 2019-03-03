@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
+import {BrowserRouter, Route} from 'react-router-dom'
+
+import Header from './Layout/Header'
 
 class App extends Component {
     
 	render() {
     	return (
-    	  <main>
-					
-
-
-    	  </main>
+    	  <BrowserRouter>
+					<main>
+							<Header />
+					</main>
+				</BrowserRouter>
     	)
 	}
 }
