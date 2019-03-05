@@ -1,9 +1,10 @@
 .header{
     background: #FFF;
-    height: auto;
+    height: 75px;
     position: fixed;
     width:100%;
     z-index: 10;
+    border-bottom: 1px solid #e6e6e6;
     .container{
         vertical-align: middle;
         margin: 5px auto;
@@ -15,7 +16,7 @@
                 .nav-list{
                     display: flex;
                     .nav-icon{
-                        padding: 0px 7px;
+                        padding: 0px 12px;
                         font-size: 1.6rem;
                         display: inline-block;
                     }
@@ -24,18 +25,22 @@
         }
         .search-div{
             height: 64px;
-            width: 80px;
             display: flex;
             align-items: center;
             position: relative;
-            width: 15%;
+            width: 17%;
                 .input-search{
-                    height: 15px;
+                    height: 18px;
                     font-family: 'Arial',sans-serif;
                     width: 100%;
-                    color: #999;
+                    color: #000;
                     position: absolute;
                     padding-left: 25px;
+                    padding-right: 0;
+                    
+                }
+                .input-search::placeholder{
+                    color: #999;
                 }
                 .input-icon{
                     padding-left: 7px;

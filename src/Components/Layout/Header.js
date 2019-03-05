@@ -51,16 +51,3 @@ class Header extends Component {
 	}
 }
 export default Header
-/*{this.state.isWriting === false &&
-						<div className="container-search-div">
-							<form className="search-form">
-								<div className="search-input">
-									<input className="input" type="text" name="search-user" placeholder="Buscar"/>
-									<div className="text-div input-div" onClick={this.updateWriting}><div className="input-div2"><span className="icon-search input-icon"></span><span className="input-text-span">Buscar</span></div></div>
-								</div>
-							</form>
-						</div>	
-					}
-					{this.state.isWriting === true &&
-							
-					}*/
