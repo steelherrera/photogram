@@ -1,15 +1,67 @@
 .header{
     background: #FFF;
-    height: 47px;
+    height: auto;
     position: fixed;
     width:100%;
     z-index: 10;
-    .logo-link{
-        text-decoration: none;
-        color: inherit;
-        .logo{
-            font-size: 25px;
-            font-family: 'Grand Hotel';
-        }   
+    .container{
+        vertical-align: middle;
+        margin: 5px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .nav-icons{
+            .nav{   
+                .nav-list{
+                    display: flex;
+                    .nav-icon{
+                        padding: 0px 7px;
+                        font-size: 1.6rem;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .search-div{
+            height: 64px;
+            width: 80px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 15%;
+                .input-search{
+                    height: 15px;
+                    font-family: 'Arial',sans-serif;
+                    width: 100%;
+                    color: #999;
+                    position: absolute;
+                    padding-left: 25px;
+                }
+                .input-icon{
+                    padding-left: 7px;
+                    vertical-align: baseline;
+                    font-size: 0.9em;
+                    font-weight: bold;
+                    color: #999;
+                    position: absolute;
+                }
+        }
+        .logo-div{
+            padding: 15px 15px;
+            .link{
+                text-decoration: none;
+                color: inherit;
+                .icon-font{
+                    font-size: 1.6rem;
+                    padding-right: 15px;
+                    border-right: 1px solid #000;
+                }
+                .logo{
+                    padding-left: 15px;
+                    font-size: 1.9rem;
+                    font-family: 'Grand Hotel';
+                }
+            }   
+        }
     }
 }

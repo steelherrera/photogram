@@ -1,0 +1,94 @@
+/*form*/
+.form{
+    margin:0 auto;
+    padding: 20px 30px;
+}
+.form div{
+    margin-bottom: 20px;
+}
+.form div:last-child{
+    text-align: right;
+}
+.form *{
+    outline:0;
+}
+.search-form{
+    outline:0;
+}
+/*buttons*/
+/*
+.button{
+    border:none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-left: 20px;
+    padding: 10px;
+    transition: all 0.4s;
+}
+.button-primary{
+    border:1px solid $button-primary-background;  
+    background:$button-primary-background;
+    color:$white;
+}
+.button-primary:hover{
+    background:$main-color;
+}
+.button-secondary{
+    border:1px solid $button-primary-background;  
+    background:$white;
+    color:$button-secondary-text;    
+}
+.button-secondary:hover{
+    background:$gray-light;
+}
+.button-cancel{
+    background:$white;
+    border:1px solid $red;  
+    color:$red;    
+}
+.button-cancel:hover{
+    border:1px solid #AEAEAE;
+    color:#AEAEAE;   
+}
+.button-large{
+    width: 120px;
+}
+.button-short{
+    width: 40px;
+}
+*/
+/*inputs*/
+.input{
+    border:1px solid $gray;
+    font-size: 0.8em;
+    padding: 5px 20px;
+    border-radius: 3px;
+    width: 100%;
+}
+.input:focus{
+    border:1px solid $main-color;
+}
+.input-rounded{
+    border-radius: 30px;
+}
+.text-area{
+    border:1px solid $gray;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 0.8em;
+    height: 40px;
+    margin-bottom: 7px;
+    padding:10px;
+    transition: height 1s;
+    width: 100%;
+}
+.text-area:focus{
+    border:1px solid $main-color;
+    height: 70px;
+}
+
+.label{
+    font-size: 0.8em;
+    font-weight: bold;
+}

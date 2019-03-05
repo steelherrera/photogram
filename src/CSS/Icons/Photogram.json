@@ -1,0 +1,255 @@
+{
+  "metadata": {
+    "created": 1551732406307,
+    "name": "Photogram",
+    "lastOpened": 0
+  },
+  "iconSets": [
+    {
+      "selection": [
+        {
+          "order": 1,
+          "id": 0,
+          "prevSize": 28,
+          "code": 59651,
+          "name": "user-o",
+          "tempChar": ""
+        }
+      ],
+      "id": 3,
+      "metadata": {
+        "name": "Font Awesome (subset)",
+        "url": "https://github.com/FortAwesome/Font-Awesome",
+        "designer": "Dave Gandy",
+        "designerURL": "https://github.com/davegandy",
+        "license": "Custom",
+        "licenseURL": "https://github.com/FortAwesome/Font-Awesome#license",
+        "iconsHash": 309851062,
+        "importSize": {
+          "width": 24,
+          "height": 28
+        }
+      },
+      "height": 1024,
+      "prevSize": 28,
+      "icons": [
+        {
+          "id": 0,
+          "paths": [
+            "M686.286 448c80.571 23.429 191.429 102.857 191.429 362.857 0 117.714-87.429 213.143-194.857 213.143h-488c-107.429 0-194.857-95.429-194.857-213.143 0-260 110.857-339.429 191.429-362.857-28.571-45.143-45.143-98.286-45.143-155.429 0-161.143 131.429-292.571 292.571-292.571s292.571 131.429 292.571 292.571c0 57.143-16.571 110.286-45.143 155.429zM438.857 73.143c-121.143 0-219.429 98.286-219.429 219.429s98.286 219.429 219.429 219.429 219.429-98.286 219.429-219.429-98.286-219.429-219.429-219.429zM682.857 950.857c66.857 0 121.714-62.286 121.714-140 0-180-60.571-292.571-173.714-298.286-51.429 45.143-118.286 72.571-192 72.571s-140.571-27.429-192-72.571c-113.143 5.714-173.714 118.286-173.714 298.286 0 77.714 54.857 140 121.714 140h488z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "width": 878,
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "tags": [
+            "user-o"
+          ],
+          "grid": 14
+        }
+      ],
+      "invisible": false,
+      "colorThemes": []
+    },
+    {
+      "selection": [
+        {
+          "order": 1,
+          "id": 1,
+          "prevSize": 24,
+          "code": 59652,
+          "name": "exit_to_app",
+          "tempChar": ""
+        },
+        {
+          "order": 1,
+          "id": 0,
+          "prevSize": 24,
+          "code": 59650,
+          "name": "notifications_active",
+          "tempChar": ""
+        }
+      ],
+      "id": 2,
+      "metadata": {
+        "name": "Material Icons (subset)",
+        "url": "https://www.google.com/design/icons/",
+        "designerURL": "https://www.google.com/design",
+        "designer": "Google",
+        "licenseURL": "https://github.com/google/material-design-icons/blob/master/LICENSE",
+        "license": "Apache License 2.0",
+        "iconsHash": 2132284954,
+        "importSize": {
+          "width": 24,
+          "height": 24
+        }
+      },
+      "height": 1024,
+      "prevSize": 24,
+      "icons": [
+        {
+          "id": 1,
+          "paths": [
+            "M810 128c46 0 86 40 86 86v596c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-170h86v170h596v-596h-596v170h-86v-170c0-46 38-86 86-86h596zM430 666l110-112h-412v-84h412l-110-112 60-60 214 214-214 214z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "tags": [
+            "exit_to_app"
+          ],
+          "grid": 24
+        },
+        {
+          "id": 0,
+          "paths": [
+            "M512 938c-48 0-86-38-86-84h170c0 49.675-37.225 84-84 84zM768 470v212l86 86v42h-684v-42l86-86v-212c0-132 70-240 192-270v-30c0-36 28-64 64-64s64 28 64 64v30c122 30 192 140 192 270zM852 448c-6-114-64-212-150-274l60-60c102 78 170 198 176 334h-86zM324 174c-88 62-146 160-152 274h-86c6-136 74-256 176-334z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "tags": [
+            "notifications_active"
+          ],
+          "grid": 24
+        }
+      ],
+      "invisible": false,
+      "colorThemes": []
+    },
+    {
+      "selection": [
+        {
+          "order": 1,
+          "id": 0,
+          "name": "search",
+          "prevSize": 32,
+          "code": 59649,
+          "tempChar": ""
+        }
+      ],
+      "id": 1,
+      "metadata": {
+        "name": "Hawcons (subset)",
+        "url": "http://hawcons.com/",
+        "designerURL": "http://www.yanlu.de/",
+        "designer": "Yannick",
+        "licenseURL": "http://hawcons.com/faq/",
+        "license": "Custom",
+        "iconsHash": 2034246827,
+        "importSize": {
+          "width": 32,
+          "height": 32
+        }
+      },
+      "height": 1024,
+      "prevSize": 32,
+      "icons": [
+        {
+          "id": 0,
+          "paths": [
+            "M621.668 653.668c-44.476 31.692-98.895 50.332-157.668 50.332-150.221 0-272-121.779-272-272s121.779-272 272-272c150.221 0 272 121.779 272 272 0 75.111-30.445 143.111-79.667 192.333l191.916 191.916c8.802 8.802 8.588 22.915-0.249 31.751-8.898 8.898-23.052 8.948-31.751 0.249l-194.581-194.581zM464 672c132.548 0 240-107.452 240-240s-107.452-240-240-240c-132.548 0-240 107.452-240 240s107.452 240 240 240v0z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "tags": [
+            "search"
+          ],
+          "grid": 32
+        }
+      ],
+      "invisible": false,
+      "colorThemes": []
+    },
+    {
+      "selection": [
+        {
+          "order": 1,
+          "id": 0,
+          "prevSize": 48,
+          "code": 59648,
+          "name": "pictures",
+          "tempChar": ""
+        }
+      ],
+      "id": 0,
+      "metadata": {
+        "name": "wpzoom (subset)",
+        "url": "http://www.wpzoom.com/wpzoom/new-freebie-wpzoom-developer-icon-set-154-free-icons/",
+        "designerURL": "http://cargocollective.com/davidferreira",
+        "designer": "David Ferreira",
+        "license": "CC BY-SA 3.0",
+        "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "iconsHash": -1288728419,
+        "importSize": {
+          "width": 48,
+          "height": 48
+        }
+      },
+      "height": 1024,
+      "prevSize": 48,
+      "icons": [
+        {
+          "id": 0,
+          "paths": [
+            "M725.334 266.666c0 29.44 23.894 53.334 53.334 53.334s53.334-23.894 53.334-53.334-23.896-53.332-53.336-53.332-53.332 23.892-53.332 53.332zM192 554.666v58.666c0 26.454 21.546 48.002 48 48.002h592l-203.968-200.534c-17.066-17.066-44.374-17.066-61.418 0l-43.114 42.454-108.822-106.454c-17.066-17.066-47.766-17.066-64.618 0l-158.060 157.866zM0 917.334c0 47.146 38.186 85.334 85.334 85.334h853.334c47.146 0 85.334-38.186 85.334-85.334l-0.002-810.668c0-47.146-38.186-85.334-85.334-85.334l-853.332 0.002c-47.148 0-85.334 38.186-85.334 85.332v810.668zM153.6 128h716.8c26.026 0 46.934 20.906 46.934 46.934v524.8c0 26.026-20.906 46.934-46.934 46.934l-716.8-0.002c-26.026 0-46.934-20.906-46.934-46.932v-524.8c0-26.028 20.908-46.934 46.934-46.934z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "tags": [
+            "pictures",
+            "images",
+            "photos"
+          ],
+          "grid": 48
+        }
+      ],
+      "invisible": false,
+      "colorThemes": []
+    }
+  ],
+  "uid": -1,
+  "preferences": {
+    "showGlyphs": true,
+    "showCodes": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "icon-",
+      "metadata": {
+        "fontFamily": "icomoon",
+        "majorVersion": 1,
+        "minorVersion": 0
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false,
+      "showSelector": false
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215
+    },
+    "historySize": 50
+  },
+  "time": 1551734138773
+}
