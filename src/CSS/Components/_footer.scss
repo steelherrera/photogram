@@ -1,0 +1,33 @@
+.footer{
+    height: 50px;
+    position: relative;
+    justify-content: space-between;
+    .nav-bar{
+        @include reset();
+        justify-content: center;
+        display: flex;
+        .nav-item{
+            @include reset();
+            list-style-type: none;
+            padding: 0 20px;
+            height: auto;
+            .nav-link{                
+                font-size: 0.7em; 
+                text-decoration: none; 
+            }    
+            .nav-link:hover{
+                color: $links;
+            }        
+        }
+        .nav-item:last-child{
+            border:none;
+        }
+        .copyrigth{
+            list-style-type: none;
+            padding: 0 50px;
+            height: auto;
+            color: $links-header;
+            font-size: 0.8em;
+        }       
+    }
+} 
