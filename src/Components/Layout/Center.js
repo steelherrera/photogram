@@ -23,7 +23,7 @@ class Center extends Component {
 						</div>
 						<div>
 							<button className="button button-primary button-large">Log In</button>
-						</div>					
+						</div>						
 					</form>
 
 					
