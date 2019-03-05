@@ -12,7 +12,7 @@ class App extends Component {
 			<BrowserRouter>
 				<main>
 					<Header />
-					<Route exact path="/" component={Container}></Route>
+					<Container />
 					<Footer />
 				</main>
 			</BrowserRouter>
