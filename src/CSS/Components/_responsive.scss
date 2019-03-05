@@ -1,0 +1,28 @@
+@include mobile {
+    .header{
+        display: none;
+    }
+    
+    .main{
+        grid-template: 
+                        'center'
+                        'left'
+                        'aside';
+        padding-top: 0;
+    }   
+    .container{
+        width: 100%;
+    }
+}
+@include tablet {
+    .header{
+        display: none;
+    }
+    .main{
+        padding-top: 0;
+    }  
+    .container{
+        width: 100%;
+    }
+    
+}

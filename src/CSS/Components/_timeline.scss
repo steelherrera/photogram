@@ -1,0 +1,57 @@
+.timeline{
+    .tweet-list{
+        @include reset();
+        .tweet-item{
+            @include reset();
+            list-style-type: none;
+            padding:10px;
+            .tweet-header{
+                @include reset();
+                .tweet-link{  
+                    font-size: 0.7em; 
+                }  
+                .tweet-link:hover{
+                    text-decoration: none;
+                }               
+                .tweet-link > .tweet-username{
+                    color:$gray;
+                    font-size: 0.7em;
+                    font-weight: normal;
+                }  
+            }
+            .tweet-text{
+                @include reset();
+                font-size:1.4em;
+                line-height:1.5em; 
+            }
+            .tweet-image{
+                @include reset();
+                text-align: center;
+                .image{
+                    max-width: 100%;
+                }
+            }
+            .tweet-date{
+                @include reset();
+                color:$gray;
+                font-size: 0.6em;                
+            }
+        }
+        .tweet-item:hover{
+            background: #F5F8FA;
+        }
+    }
+    .tweet-icons{
+        @include reset();
+        display: flex;
+        .icons-item{
+            @include reset();
+            list-style-type: none;
+            margin: 8px 20px 8px 0;
+            .icons-link:hover{
+                color:$text-color;
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.aside{
+    grid-area: aside;
+    padding: 10px;
+    .section{
+        background: $white;
+        margin-bottom: 10px;
+        padding: 15px;
+        .title{
+            @include reset();
+            color:$text-color;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .list{
+            @include reset();
+            
+            .item-list{
+                @include reset();
+                font-weight: bold;
+                font-size: 0.8em;
+                list-style-type: none;
+                margin-bottom: 10px;
+            }
+
+            .item-list-who{
+                border-bottom: $gray 1px solid;
+                padding-left: 60px;
+                position: relative;
+                .image{
+                    left:0;
+                    position:absolute;                    
+                    top:0;
+                }
+                .username{
+                    color:$gray;
+                    font-weight: normal;
+                }
+                .button{
+                    display: block;
+                    margin:5px 0 10px 0;
+                }
+            }
+        }
+    } 
+}
