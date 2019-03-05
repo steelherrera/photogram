@@ -1,0 +1,31 @@
+
+*{  
+}
+body{
+    @include reset();
+    background: $background;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    margin: 0 auto;
+    width: 980px;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 75px;
+}
+/*
+.hidden{
+    display: none;
+}
+.flex{
+    display: flex;
+}
+.flex-between{    
+    justify-content: space-between;
+}*/

@@ -1,0 +1,49 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    width: 980px;
+    margin-bottom: 40px;
+    .post{
+        border-radius: 3px;
+        border: 1px solid #e6e6e6;
+        background-color: #FFF;
+        width: 60%;
+        .post-header{
+            height: 60px;
+            display: flex;
+            align-items: center;
+            .header-inline{
+                display: inline-block;
+                &.icon{
+                    margin-left: 20px;
+                }
+                &.text{
+                    padding-left: 2%;
+                }
+                .icon-container{
+                    width: 30px;
+                    height: 30px;
+                    box-sizing: border-box;
+                    display: block;
+                    border-radius: 50%;
+                    .header-usericon{
+                        border-radius: inherit;
+                        font: inherit;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .image-container{
+            width: 100%;
+            .post-image{
+                width: 100%;
+            }
+        }
+        .post-footer{
+            height: 90px;
+        }
+    }
+}

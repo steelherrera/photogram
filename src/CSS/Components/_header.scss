@@ -1,0 +1,72 @@
+.header{
+    background: #FFF;
+    height: 75px;
+    position: fixed;
+    width:100%;
+    z-index: 10;
+    border-bottom: 1px solid #e6e6e6;
+    .container{
+        vertical-align: middle;
+        margin: 5px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .nav-icons{
+            .nav{   
+                .nav-list{
+                    display: flex;
+                    .nav-icon{
+                        padding: 0px 12px;
+                        font-size: 1.6rem;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .search-div{
+            height: 64px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 17%;
+                .input-search{
+                    height: 18px;
+                    font-family: 'Arial',sans-serif;
+                    width: 100%;
+                    color: #000;
+                    position: absolute;
+                    padding-left: 25px;
+                    padding-right: 0;
+                    
+                }
+                .input-search::placeholder{
+                    color: #999;
+                }
+                .input-icon{
+                    padding-left: 7px;
+                    vertical-align: baseline;
+                    font-size: 0.9em;
+                    font-weight: bold;
+                    color: #999;
+                    position: absolute;
+                }
+        }
+        .logo-div{
+            padding: 15px 15px;
+            .link{
+                text-decoration: none;
+                color: inherit;
+                .icon-font{
+                    font-size: 1.6rem;
+                    padding-right: 15px;
+                    border-right: 1px solid #000;
+                }
+                .logo{
+                    padding-left: 15px;
+                    font-size: 1.9rem;
+                    font-family: 'Grand Hotel';
+                }
+            }   
+        }
+    }
+}

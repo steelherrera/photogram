@@ -1,0 +1,20 @@
+@mixin reset(){
+    margin:0;
+    padding:0;
+}
+
+@mixin mobile {
+    @media (max-width: #{$breakpoint-mobile}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: #{$breakpoint-mobile + 1px}) and (max-width: #{$breakpoint-desktop - 1px}) {
+        @content;
+    }
+}  
+@mixin desktop {
+    @media (min-width: #{$breakpoint-desktop}) {
+        @content;
+    }
+}
