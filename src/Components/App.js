@@ -22,9 +22,9 @@ class App extends Component {
 			<Router>
 				<main>
 					<Header />
-					<Route exact path="/" component={Container} /> 
-					<Route path="/signin" component={Signin}></Route>
-					<Route path="/user/:userId" component={Profile}></Route>
+					<Route exact path="/photogram-react/" component={Container} /> 
+					<Route path="/photogram-react/signin" component={Signin}></Route>
+					<Route path="/photogram-react/user/:userId" component={Profile}></Route>
 					<Footer />
 				</main>
 			</Router>

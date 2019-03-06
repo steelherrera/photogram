@@ -10,19 +10,19 @@ const imageminSvgo = require("imagemin-svgo");
 //copyPublicFolder
 fs.copySync(path.resolve(__dirname, 'public'), path.resolve(__dirname, 'dist'), {
     dereference: true
-})
+});
 
 module.exports = {
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'dist/'),
         filename: 'bundle.js',
-        publicPath: '/dist'
+        publicPath: '/photogram-react/'
     },
-    mode:'development',
+    mode:'production',
     watch: true,
     devServer: {
-      contentBase: path.join(__dirname, 'dist'),
+      contentBase: path.join(__dirname, '/photogram-react/'),
       port: 3000,
       compress: true,
       open: true,

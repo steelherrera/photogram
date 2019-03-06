@@ -15,7 +15,7 @@ class Container extends Component {
 		console.log(this.props.location.query);
 		if(this.props.location.query === undefined){
 			console.log("Jiji");
-			return (<Redirect to="/signin" />);
+			return (<Redirect to="/photogram-react/signin" />);
 		}
     	return (
 			<section className="main container">
