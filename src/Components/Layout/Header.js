@@ -10,9 +10,7 @@ class Header extends Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {
-			isWriting: true
-		};
+		console.log(this.state, 'State signin component');
 		this.handleChange = this.handleChange.bind(this);
 		this.updateWriting = this.updateWriting.bind(this);
 	}
@@ -30,7 +28,7 @@ class Header extends Component {
 			<header className="header">
 				<div className="container">
 					<div className="logo-div">
-						<a href="#" className="link"><span className="icon-pictures icon-font"></span><span className="logo">Photogram</span></a>
+						<Link to={{pathname: "/", "query": {"isLoggedIn": true}}} className="link"><span className="icon-pictures icon-font"></span><span className="logo">Photogram</span></Link>
 					</div>
 					<div className="search-div">
 						<input className="input input-search" type="text" name="search-user" placeholder="Buscar"/>
@@ -40,7 +38,7 @@ class Header extends Component {
 						<nav className="nav">
 							<ul className="nav-list">
 								<li className="nav-icon"><a href="#"><span className="icon-notifications_active"></span></a></li>
-								<li className="nav-icon"><a href="#"><span className="icon-user-o"></span></a></li>
+								<li className="nav-icon"><Link to="/user/steelherrera"><span className="icon-user-o"></span></Link></li>
 								<li className="nav-icon"><a href="#"><span className="icon-exit_to_app"></span></a></li>
 							</ul>
 						</nav>

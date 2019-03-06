@@ -5,6 +5,7 @@ import Header from './Layout/Header'
 import Container from './Layout/Container'
 import Footer from './Layout/Footer'
 import Profile from './Content/Profile'
+import Signin from './Layout/Signin';
 
 class App extends Component {
 	
@@ -13,6 +14,7 @@ class App extends Component {
 		this.state = {
 			isLoggedIn: false
 		};
+		console.log(props);
 	}
 
 	render() {
@@ -20,7 +22,8 @@ class App extends Component {
 			<Router>
 				<main>
 					<Header />
-					<Route exact path="/" render={() => <Container isLoggedIn={this.state.isLoggedIn} />} /> 
+					<Route exact path="/" component={Container} /> 
+					<Route path="/signin" component={Signin}></Route>
 					<Route path="/user/:userId" component={Profile}></Route>
 					<Footer />
 				</main>
