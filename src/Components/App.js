@@ -4,6 +4,7 @@ import {BrowserRouter, Route} from 'react-router-dom'
 import Header from './Layout/Header'
 import Container from './Layout/Container'
 import Footer from './Layout/Footer'
+import Profile from './Content/Profile'
 
 class App extends Component {
     
@@ -11,9 +12,9 @@ class App extends Component {
     	return (
 			<BrowserRouter>
 				<main>
-					<Header />
-					<Route exact path="/" component={Container}></Route>
-					<Footer />
+					<Header></Header>
+					<Profile></Profile>
+					<Footer></Footer>
 				</main>
 			</BrowserRouter>
     	)
