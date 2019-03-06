@@ -12,9 +12,10 @@ class App extends Component {
     	return (
 			<BrowserRouter>
 				<main>
-					<Header></Header>
-					<Profile></Profile>
-					<Footer></Footer>
+					<Header />
+					<Container />
+					<Profile />
+					<Footer />
 				</main>
 			</BrowserRouter>
     	)
