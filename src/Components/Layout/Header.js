@@ -28,7 +28,7 @@ class Header extends Component {
 			<header className="header">
 				<div className="container">
 					<div className="logo-div">
-						<Link to={{pathname: "/photogram-react/", "query": {"isLoggedIn": true}}} className="link"><span className="icon-pictures icon-font"></span><span className="logo">Photogram</span></Link>
+						<Link to={{pathname: "/", "query": {"isLoggedIn": true}}} className="link"><span className="icon-pictures icon-font"></span><span className="logo">Photogram</span></Link>
 					</div>
 					<div className="search-div">
 						<input className="input input-search" type="text" name="search-user" placeholder="Buscar"/>
