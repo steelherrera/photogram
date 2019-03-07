@@ -20,26 +20,26 @@ class Signin extends Component {
 							<a href="#" className="link"><span className="logo">Photogram</span></a>
 						</div>
 						<div>
-							<input type="text" className="input-login" placeholder="Phone number, username, or email" id="username" name="username" title="Username" />
+							<input type="text" className="input-login" placeholder="Teléfono, usuario, o email" id="username" name="username" title="Username" />
 						</div>
 						<div>
-							<input type="password" className="input-login" placeholder="Password" id="password" name="password" title="Password" />
+							<input type="password" className="input-login" placeholder="Contraseña" id="password" name="password" title="Password" />
 						</div>
 						<div>
-							<button className="button button-primary button-large">Log In</button>
+							<button className="button button-primary button-large">Entrar</button>
 						</div>
                         <div className="line-or-login">
                             <div className="login-inline left-right-lines"></div>
-                            <div className="login-inline login-or-text">OR</div>
+                            <div className="login-inline login-or-text">Ó</div>
                             <div className="login-inline left-right-lines"></div>
                         </div>
                         <div className="login-facebook-container">
                             <button className="login-facebook-button">
                                 <span></span>
-                                <span>Log in with Facebook</span>
+                                <span>Entrar con Facebook</span>
                             </button>
                         </div>
-                        <a className="forgot-pass-link" href="#">Forgot password?</a>
+                        <a className="forgot-pass-link" href="#">¿Olvidaste tu contraseña?</a>
 					</div>
 				</section>
     	)
