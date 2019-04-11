@@ -2,14 +2,51 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
 import LoginImg from '../../images/login.png';
 
+const url = "https://6vkudxd0g7.execute-api.us-east-1.amazonaws.com/dev/login";
+const timeout = 10000;
+
+const buildRequest = (params) => {
+    return {
+        method: 'POST',
+        body: JSON.stringify(params),
+        timeout: timeout,
+        mode: 'cors',
+        headers: new Headers({
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        })
+    };
+}
+
 class Signin extends Component {
 
     constructor(props){
         super(props);
 		this.state = {
 			isLoggedIn: true
+		};
+		this.handleSubmit = this.handleSubmit.bind(this);
+	}
+	
+	
+    
+
+    handleSubmit(event) {
+        event.preventDefault();
+        const form = new FormData(event.target);
+        const data = {          
+            "email": form.get("email"),
+            "username": form.get("username"),
+            
         };
-    }
+        const request = buildRequest(data);
+        fetch(url, request).then( res => res.json()).catch((err) => {
+            console.log(err);
+		}).then( (res) => { 
+			console.log(res),
+			this.setState.isLoggedIn=true;
+		 });
+      }
     
 	render() {
     	return (
