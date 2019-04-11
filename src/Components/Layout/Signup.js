@@ -9,7 +9,11 @@ const buildRequest = (params) => {
         method: 'POST',
         body: JSON.stringify(params),
         timeout: timeout,
-        headers: { "Content-Type": "application/json" }
+        mode: 'cors',
+        headers: new Headers({
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        })
     };
 }
 
@@ -28,13 +32,14 @@ class Signup extends Component {
             "fName": form.get("fName"),
             "lName": form.get("lName"),
             "name": form.get("fName") + form.get("lName"),
+            "email": form.get("email"),
             "username": form.get("username"),
             "pass": form.get("pass")
         };
-        console.log(data);
         const request = buildRequest(data);
-        fetch(url, request).then( res => res.json())
-        .then( (res) => { console.log(res); });
+        fetch(url, request).then( res => res.json()).catch((err) => {
+            console.log(err);
+        }).then( (res) => { console.log(res); });
       }
 
     

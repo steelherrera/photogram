@@ -9,7 +9,6 @@ class Header extends Component {
 
 	constructor(props) {
 		super(props);
-		console.log(this.state, 'State signin component');
 		this.handleChange = this.handleChange.bind(this);
 		this.updateWriting = this.updateWriting.bind(this);
 	}

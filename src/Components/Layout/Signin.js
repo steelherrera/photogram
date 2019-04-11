@@ -6,7 +6,6 @@ class Signin extends Component {
 
     constructor(props){
         super(props);
-        console.log(this.state, 'State signin component');
 		this.state = {
 			isLoggedIn: true
         };
