@@ -10,11 +10,18 @@ class Profile extends Component {
                     <header className ="profile-header">
                         <div className ="profile-pic">
                         <a className="icon-container" href="#">
-                                <img className="profile-usericon" src="https://instagram.fbaq2-1.fna.fbcdn.net/vp/18832080f54a7107cd0425aa6c3717c6/5D084C2C/t51.2885-19/s150x150/29403479_1687267934684705_3301383352883347456_n.jpg?_nc_ht=instagram.fbaq2-1.fna.fbcdn.net"></img></a>
+                                <img className="profile-usericon">
+                                {
+                                    (this.props.data.profilePicUrl==null)?
+                                        src = "http://www.sbcs.edu.tt/wp-content/uploads/2016/04/profile-default.png"
+                                    :
+                                        src= this.props.data.profilePicUrl
+                                }
+                                </img></a>
                         </div>
                         <section className ="profile-section">
                             <div className ="name-container">
-                                <h2 className ="profile-name">steelherrera</h2>
+                                <h2 className ="profile-name">{this.props.data.username}</h2>
                                 <button className ="profile-button">Seguir</button>
                             </div>
                             <ul className="profile-numbers">
@@ -23,7 +30,7 @@ class Profile extends Component {
                                 <a href="#"><li className="profile-number-item">2 seguidos</li></a>
                             </ul>
                             <div className="description-container">
-                                <h2 className="description">descripción</h2>
+                                <h2 className="description">{this.props.data.profileDescription}</h2>
                             </div>
                         </section>
                     </header>
