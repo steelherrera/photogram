@@ -61,8 +61,13 @@
     background-color: white;
     color: black;
     width: 77%;
-    height: 290px;
+    height: 310px;
     margin: 7px;
+    .message{
+        margin: 0;
+        color: red;
+        font-size: 12px;
+    }
     .line-or-login{
         margin-bottom: 0;
         .login-inline{

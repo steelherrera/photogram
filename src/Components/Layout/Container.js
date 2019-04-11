@@ -9,7 +9,8 @@ class Container extends Component {
 	}
 
 	render() {
-		if(this.props.location.query === undefined){
+		console.log(localStorage.getItem("user"));
+		if(localStorage.getItem("user") === null){
 			return (<Redirect to="/signin" />);
 		}
     	return (

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import LoginImg from '../../images/login.png';
+import {NotificationContainer, NotificationManager} from 'react-notifications'
+import {Link} from 'react-router-dom';
 
 const url = "https://6vkudxd0g7.execute-api.us-east-1.amazonaws.com/dev/users";
 const timeout = 10000;
@@ -36,10 +38,20 @@ class Signup extends Component {
             "username": form.get("username"),
             "pass": form.get("pass")
         };
-        const request = buildRequest(data);
-        fetch(url, request).then( res => res.json()).catch((err) => {
-            console.log(err);
-        }).then( (res) => { console.log(res); });
+        if(data.fName === "" || data.lName === "" || data.name === "" || data.email === "" || data.username === "" || data.pass === ""){
+            NotificationManager.error('Por favor llene todos los campos.');
+        }else{
+            const request = buildRequest(data);
+            fetch(url, request).then( res => res.json()).catch((err) => {
+                console.log(err);
+            }).then( (res) => {
+                if(res.code === 200){
+                    this.props.history.push("/signin");
+                }else if(res.code === 500){
+                    NotificationManager.error('Hay un error en sus datos.');
+                }
+            });
+        }
       }
 
     
@@ -50,8 +62,9 @@ class Signup extends Component {
                     <img className="login-img" src={LoginImg} />
                     <form className="register-form" onSubmit={this.handleSubmit}>
                         <div className="logo-div">
-							<a href="#" className="link"><span className="logo">Photogram</span></a>
+							<Link to="/signin" className="link"><span className="logo">Photogram</span></Link>
 						</div>
+                        <NotificationContainer />
                         <div className="input-div">
 							<input type="text" className="input-login" placeholder="Correo electrónico" id="email" name="email" title="Email" />
 						</div>

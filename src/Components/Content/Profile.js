@@ -1,27 +1,34 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 
+let data;
+
 class Profile extends Component {
     
+    componentWillMount(){
+        this.setState(JSON.parse(localStorage.getItem("user")));
+    }
+
 	render() {
+        console.log(this.state);
     	return (
 			<section className="profile">					
 				<div className="container">
                     <header className ="profile-header">
                         <div className ="profile-pic">
-                        <a className="icon-container" href="#">
-                                <img className="profile-usericon">
+                            <a className="icon-container" href="#">
                                 {
-                                    (this.props.data.profilePicUrl==null)?
-                                        src = "http://www.sbcs.edu.tt/wp-content/uploads/2016/04/profile-default.png"
+                                    (this.state.profilePicUrl === null) ?
+                                        <img className="profile-usericon" src="http://www.sbcs.edu.tt/wp-content/uploads/2016/04/profile-default.png"/>
                                     :
-                                        src= this.props.data.profilePicUrl
+                                        <img className="profile-usericon" src={this.state.profilePicUrl}/>
                                 }
-                                </img></a>
+                                
+                            </a>
                         </div>
                         <section className ="profile-section">
                             <div className ="name-container">
-                                <h2 className ="profile-name">{this.props.data.username}</h2>
+                                <h2 className ="profile-name">{this.state.username}</h2>
                                 <button className ="profile-button">Seguir</button>
                             </div>
                             <ul className="profile-numbers">
@@ -30,7 +37,14 @@ class Profile extends Component {
                                 <a href="#"><li className="profile-number-item">2 seguidos</li></a>
                             </ul>
                             <div className="description-container">
-                                <h2 className="description">{this.props.data.profileDescription}</h2>
+                                <h2 className="description">
+                                {
+                                    (this.state.profileDescription === null || this.state.profileDescription === "") ?
+                                    "Añadir descripción"
+                                    :
+                                    this.state.profileDescription
+                                }
+                                </h2>
                             </div>
                         </section>
                     </header>
