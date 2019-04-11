@@ -6,6 +6,7 @@ import Container from './Layout/Container'
 import Footer from './Layout/Footer'
 import Profile from './Content/Profile'
 import Signin from './Layout/Signin';
+import Signup from './Layout/Signup';
 
 class App extends Component {
 	
@@ -24,6 +25,7 @@ class App extends Component {
 					<Header />
 					<Route exact path="/" component={Container} /> 
 					<Route path="/signin" component={Signin}></Route>
+					<Route path="/signup" component={Signup}></Route>
 					<Route path="/user/:userId" component={Profile}></Route>
 					<Footer />
 				</main>

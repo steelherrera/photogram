@@ -9,7 +9,7 @@
     background-color:#efefef;
 }
 
-.main-container-login{
+.main-container-register{
     display: flex;
     align-items: center;    
     justify-content: center;
@@ -37,32 +37,20 @@
             font-size: 3.5rem;
             font-family: 'Grand Hotel';
         }
-    }
+    }   
 }
 
-.register{
-    margin: 7px;
-    width: 77%;
-    border:1px solid $gray;
-    padding: 20px 30px;
-    background-color: white;
-    color: #999;
-    text-align: center;
-    font-size: 0.9em;
-    .register-link{
-        font-size: 0.9em;
-        color: #003569;
-    }
-}
-
-.form{
+.register-form{
     border:1px solid $gray;
     padding: 20px 30px;
     background-color: white;
     color: black;
-    width: 77%;
-    height: 290px;
+    width: 35%;
+    height: 390px;
     margin: 7px;
+    .input-div{
+        margin-bottom: 20px;
+    }
     .line-or-login{
         margin-bottom: 0;
         .login-inline{
@@ -81,17 +69,6 @@
             }
         }
     }    
-    .login-facebook-container{
-        text-align: center !important;
-        .login-facebook-button{
-            background: 0;
-            color: #385185;
-            border: none;
-            cursor: pointer;
-            font-size: small;
-            font-weight: bold;
-        }
-    }
     .forgot-pass-link{
         display: block;
         text-align: center;
