@@ -6,7 +6,7 @@ import Container from './Layout/Container'
 import Footer from './Layout/Footer'
 import Profile from './Content/Profile'
 import Signin from './Layout/Signin';
-import Signup from './Layout/Signup';
+import Signup from './Layout/Signup';	
 
 class App extends Component {
 	
