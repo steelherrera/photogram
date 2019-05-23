@@ -4,7 +4,6 @@ import Backdrop from '../Backdrop/Backdrop';
 import FileBase64 from 'react-filebase64';
 import { NotificationManager } from 'react-notifications'
 import { Link } from 'react-router-dom';
-let add = false;
 let data;
 const url = "https://6vkudxd0g7.execute-api.us-east-1.amazonaws.com/dev/users/post";
 const timeout = 10000;
@@ -27,35 +26,37 @@ const datos = [{
 }]
 
 const buildRequest = (params) => {
+    const token = localStorage.getItem("token");
     return {
         method: 'POST',
         body: JSON.stringify(params),
         timeout: timeout,
-        mode: 'cors',
-        headers: new Headers({
+        headers: {
             "Content-Type": "application/json",
-            "Accept": "application/json"
-        })
+            "Accept": "application/json",
+            "x-api-key": token
+        }
     };
 }
 const buildRequestGet = () => {
+    const token = localStorage.getItem("token");
     return {
         method: 'GET',
         timeout: timeout,
-        mode: 'cors',
-        headers: new Headers({
+        headers: {
             "Content-Type": "application/json",
-            "Accept": "application/json"
-        })
+            "Accept": "application/json",
+            "x-api-key": token
+        }
     };
 };
 class Profile extends Component {
+
     componentDidMount(userId) {
         const request = buildRequestGet();
         fetch("https://6vkudxd0g7.execute-api.us-east-1.amazonaws.com/dev/users/" + datos[0].userId, request)
             .then(response => response.json())
             .then(data => this.setState({ data: data }));
-        //console.log(this.state.data)
     }
     componentWillMount() {
         this.setState(JSON.parse(localStorage.getItem("user")));
@@ -64,6 +65,7 @@ class Profile extends Component {
         super(props);
 
         this.state = {
+            add: false,
             adding: false,
             files: [],
             value: '',
@@ -72,26 +74,26 @@ class Profile extends Component {
         this.addModalHandler = this.addModalHandler.bind(this);
         this.cancelHandler = this.cancelHandler.bind(this);
         this.addHandler = this.addHandler.bind(this);
-        this.getFiles = this.getFiles.bind(this);
+        this.getFiles = this.getFiles.bind(this);   
         this.handleChange = this.handleChange.bind(this);
     }
     addModalHandler(event) {
-        this.setState({ adding: true });
+        this.setState({ add: false, adding: true });
     }
     cancelHandler(event) {
-        this.setState({ adding: false });
+        this.setState({ add: false, adding: false });
     }
     addHandler(event) {
         event.preventDefault();
-        this.setState({ value: event.target.value.toUpperCase() });
+        this.setState({ add: false, value: event.target.value.toUpperCase() });
         const form = new FormData(event.target);
         const data = {
             "userPic": this.state.files,
             "description": this.state.value
         };
-        console.log(data.userPic)
-
-        if (data.selectedFile === null) {
+        console.log(JSON.stringify(data.userPic));
+        
+        if(data.selectedFile === null){
             NotificationManager.error('Seleccione un archivo.');
         } else {
             const request = buildRequest(data);
@@ -119,17 +121,17 @@ class Profile extends Component {
     createRowPosts() {
         let rowPosts = []
         for (let j = 0; j < 3; j++) {
-            if (j == 0 && add == false) {
-                add = true
+            if (j == 0 && this.state.add == false) {
+                this.state.add = true;
                 rowPosts.push(
                     <div className="publication-item">
-                        <a className="publication-item-container" href="#"><button className="publication-image" onClick={this.addModalHandler}>Agregar publicacion</button></a>
+                        <span className="publication-item-container" href="#"><button className="publication-button"  onClick={this.addModalHandler}> <img className="publication-ico" src="http://cdn.onlinewebfonts.com/svg/img_51616.png" /></button></span>
                     </div>
                 )
             } else {
                 rowPosts.push(
                     <div className="publication-item">
-                        <a className="publication-item-container" href="#"><img className="publication-image" src={datos[0].posts[j].picUrl}></img></a>
+                        <span className="publication-item-container" href="#"><img className="publication-image" src={datos[0].posts[j].picUrl}></img></span>
                     </div>
                 )
             }
@@ -168,20 +170,24 @@ class Profile extends Component {
                                 onCancel={this.cancelHandler}
                                 onAdd={this.addHandler}
                             >   <form onSubmit={this.addHandler}>
-                                    <div>
+                                    <div className = "div-p">
                                         <FileBase64
                                             onDone={this.getFiles.bind(this)}
                                         />
                                     </div>
-                                    <div>
-                                        <input type="text" placeholder="Agrega una descripción" id="description" name="description" value={this.state.value} onChange={this.handleChange} />
-                                    </div>
+                                        <div className= "publication-row" >
+                                            <input className = "modal__input" type="text" placeholder="Agrega una descripción" id="description" name="description" value={this.state.value} onChange={this.handleChange} />
+                                            <div>
+                                                <h3>Previsualización</h3>
+                                                <img className = "publication-image-preview" src="http://as01.epimg.net/tikitakas/imagenes/2018/11/01/portada/1541090901_594075_1541091249_noticia_normal.jpg"></img>
+                                            </div>
+                                        </div>
                                 </form>
                             </Modal>)}
                         <header className="profile-header">
 
                             <div className="profile-pic">
-                                <a className="icon-container" href="#">
+                                <a className="icon-container">
                                     {
                                         (this.state.profilePicUrl === null) ?
                                             <img className="profile-usericon" src="http://www.sbcs.edu.tt/wp-content/uploads/2016/04/profile-default.png" />
@@ -197,9 +203,9 @@ class Profile extends Component {
                                     <button className="profile-button">Seguir</button>
                                 </div>
                                 <ul className="profile-numbers">
-                                    <a href="#"><li className="profile-number-item">3 publicaciones</li></a>
-                                    <a href="#"><li className="profile-number-item">2 seguidores</li></a>
-                                    <a href="#"><li className="profile-number-item">2 seguidos</li></a>
+                                    <a><li className="profile-number-item">3 publicaciones</li></a>
+                                    <a><li className="profile-number-item">2 seguidores</li></a>
+                                    <a><li className="profile-number-item">2 seguidos</li></a>
                                 </ul>
 
                                 <div className="description-container">
@@ -218,11 +224,11 @@ class Profile extends Component {
 
                         <div className="publication-row-container">
                             <div className="publication-bar">
-                                <a className="publication-item" href="#">
+                                <a className="publication-item">
                                     <div className="publication-tag-image"></div>
                                     <li className="publication-tag-name">PUBLICACIONES</li>
                                 </a>
-                                <a className="publication-item" href="#">
+                                <a className="publication-item">
                                     <span className="tagged-tag">
                                         <div className="tagged-tag-image"></div>
                                         <li className="tagged-tag-name">ETIQUETADAS</li>

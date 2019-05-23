@@ -105,6 +105,20 @@
                             height: 302px;
                             width: 302px;
                         }
+                        .publication-button{
+                            border-radius: 0.5em;
+                            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+                            cursor: pointer;
+                            transition: all 0.4s;
+                            height: 302px;
+                            width: 302px;
+                            background-color: #359DF4;;
+                        }
+                        .publication-ico{
+                            
+                            height: 70px;
+                            width: 80px;
+                        }
                     }
                 }
             }

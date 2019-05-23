@@ -1,13 +1,13 @@
 .modal {
     border-radius: 0.5em;
-    width: 60%;
+    width: 50%;
     background:white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     color:black;
     position: fixed;
     top: 20vh;
-    left: 20%;
-    height: 500px;
+    left: 25%;
+    height: 600px;
 }
 
 .modal__header{ 
@@ -25,20 +25,21 @@
 }
 
 .modal__content{
-    padding: 1rem;
+    padding: 40px;
 }
 
 .modal__actions{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    padding: 10px;
     .profile-button{
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
         border:none;
         border-radius: 0.5em;
         cursor: pointer;
         font-size: 1.2em;
         transition: all 0.4s;
         background: #359DF4;
-        margin-top: 19px;
         width: 90px;
         height: 40px;
         font: bold;
@@ -46,5 +47,33 @@
     } 
 }
 
+.modal__input{
+    justify-content: top;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border:none;
+    border-radius: 0.5em;
+    font-size: 1.2em;
+    transition: all 0.4s;
+    padding-top: 15px;
+    margin-left: 60px;
+    width: 330px;
+    height: 200px;
+    font: bold;
+    color: black;
+}
 
+.publication-row{
+    @include reset();
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
 
+.publication-image-preview{
+    margin-right: 60px;
+    height: 302px;
+    width: 302px;
+}
+.div-p{
+    margin-left: 60px;
+}
