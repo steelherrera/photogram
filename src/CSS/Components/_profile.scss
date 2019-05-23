@@ -89,17 +89,21 @@
             }
             .publication-container{
                 @include reset();
-                display: block;
+                display: flex;
+                align-items: center;    
                 justify-content: center;
+                margin: 0 auto;
                 .publication-row{
                     @include reset();
                     display: flex;
                     justify-content: space-between;
+                    align-items: center;
                     .publication-item{
                         @include reset();
+                        padding: 15px;
                         .publication-image{
-                            height: 250px;
-                            width: 250px;
+                            height: 302px;
+                            width: 302px;
                         }
                     }
                 }

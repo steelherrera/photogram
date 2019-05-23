@@ -33,7 +33,7 @@ class Signup extends Component {
         const data = {
             "fName": form.get("fName"),
             "lName": form.get("lName"),
-            "name": form.get("fName") + form.get("lName"),
+            "name": form.get("fName") + " " + form.get("lName"),
             "email": form.get("email"),
             "username": form.get("username"),
             "pass": form.get("pass")
