@@ -6,7 +6,7 @@
   "repository": "",
   "author": "jestrade <jesuestrada@gmail.com>",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "express": "^3.2.6",
     "normalize.css": "^8.0.1",
     "react": "^16.8.0",
