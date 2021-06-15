@@ -6,25 +6,28 @@ const imageminGifsicle = require("imagemin-gifsicle");
 const imageminJpegtran = require("imagemin-jpegtran");
 const imageminOptipng = require("imagemin-optipng");
 const imageminSvgo = require("imagemin-svgo");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-//copyPublicFolder
 fs.copySync(path.resolve(__dirname, 'public'), path.resolve(__dirname, 'dist'), {
     dereference: true
 })
+console.log(process.env.NODE_ENV);
 
 module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: '/'
     },
-    mode:'development',
+    mode: process.env.NODE_ENV || 'development',
     watch: true,
     devServer: {
       contentBase: path.join(__dirname,'dist'),
       port: 3000,
       compress: true,
-      open: true
+      open: true,
+      historyApiFallback: true
     },
     module: {
         rules: [
@@ -83,12 +86,7 @@ module.exports = {
 
         ]
     },
-    plugins: [	
-      new Dotenv({
-        path: './.env', 
-        safe: false 
-      }),
-      // Make sure that the plugin is after any plugins that add images, example `CopyWebpackPlugin`
+    plugins: [
       new ImageminPlugin({
         test: /\.(png|jpg|gif)$/,
         bail: false, // Ignore errors on corrupted images

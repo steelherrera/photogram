@@ -39,3 +39,6 @@
 .icon-pictures:before {
   content: "\e900";
 }
+.icon-price-tag:before {
+  content: "\e935";
+}

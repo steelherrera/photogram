@@ -1,0 +1,50 @@
+.modal {
+    border-radius: 0.5em;
+    width: 60%;
+    background:white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    color:black;
+    position: fixed;
+    top: 20vh;
+    left: 20%;
+    height: 500px;
+}
+
+.modal__header{ 
+    display: flex;
+    justify-content: center;
+    border-radius: 0.2em;
+    padding: 1rem;
+    background: #359DF4;
+    color: white;   
+}
+
+.modal__header h1{ 
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.modal__content{
+    padding: 1rem;
+}
+
+.modal__actions{
+    display: flex;
+    justify-content: flex-end;
+    .profile-button{
+        border:none;
+        border-radius: 0.5em;
+        cursor: pointer;
+        font-size: 1.2em;
+        transition: all 0.4s;
+        background: #359DF4;
+        margin-top: 19px;
+        width: 90px;
+        height: 40px;
+        font: bold;
+        color: white;
+    } 
+}
+
+
+

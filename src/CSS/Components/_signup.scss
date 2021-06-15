@@ -1,0 +1,133 @@
+.login-img{
+    margin: 7.5px;
+    padding-top: 70px;
+}
+
+.puerca{
+    display: inline-block;
+    height:1px;
+    background-color:#efefef;
+}
+
+.main-container-register{
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 980px;
+    height: 580px;
+    margin-bottom: 100px;
+}
+
+.logo-div{
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    padding: 15px 15px;
+    .link{
+        text-decoration: none;
+        color: inherit;
+        .icon-font{
+            font-size: 1.6rem;
+            padding-right: 15px;
+            border-right: 1px solid #000;
+        }
+        .logo{
+            font-size: 3.5rem;
+            font-family: 'Grand Hotel';
+        }
+    }   
+}
+
+.register-form{
+    border:1px solid $gray;
+    padding: 20px 30px;
+    background-color: white;
+    color: black;
+    width: 35%;
+    height: 390px;
+    margin: 7px;
+    .message{
+        margin: 0;
+        margin-bottom: 5px;
+        color: red;
+        font-size: 12px;
+    }
+    .input-div{
+        margin-bottom: 20px;
+    }
+    .line-or-login{
+        margin-bottom: 0;
+        .login-inline{
+            display: inline-block;
+            &.left-right-lines{
+                width: 41%;
+                background-color: #efefef;
+                height: 1px;
+                position: relative;
+                top: 1em;
+            }
+            &.login-or-text{
+                color: #999;
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+        }
+    }    
+    .forgot-pass-link{
+        display: block;
+        text-align: center;
+        color: #003569;
+        font-size: 12px;
+        line-height: 14px;
+        font-size: small;
+    }
+}
+
+.button{
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.8em;
+    padding: 8px;
+    transition: all 0.4s;
+}
+
+.button-primary{
+    color: #fff; 
+}
+
+.button-large{
+    width: 100%;
+}
+
+.button-short{
+    width: 40px;
+}
+
+.input{
+    border:1px solid $gray;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.input-login{
+    border:1px solid $gray;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 0.8em;
+    margin-bottom: -15px;
+    padding:10px;
+    width: 100%;
+}
+
+.input:focus{
+    border:1px solid $main-color;
+}
+
+.label{
+    font-size: 0.8em;
+    font-weight: bold;
+}
